@@ -1,0 +1,180 @@
+attendance/facenet/dataset/aligned/charitesh/charitesh3.png 83 143 336 466
+attendance/facenet/dataset/aligned/charitesh/charitesh9.png 60 129 309 441
+attendance/facenet/dataset/aligned/charitesh/charitesh5.png 151 100 459 494
+attendance/facenet/dataset/aligned/charitesh/charitesh17.png 0 86 116 241
+attendance/facenet/dataset/aligned/charitesh/charitesh6.png 112 126 318 385
+attendance/facenet/dataset/aligned/charitesh/charitesh4.png 222 163 533 545
+attendance/facenet/dataset/aligned/charitesh/charitesh12.png 132 93 366 389
+attendance/facenet/dataset/aligned/charitesh/charitesh11.png 151 184 358 457
+attendance/facenet/dataset/aligned/charitesh/charitesh15.png 230 135 466 439
+attendance/facenet/dataset/aligned/charitesh/charitesh13.png 177 184 696 869
+attendance/facenet/dataset/aligned/charitesh/charitesh10.png 213 209 630 729
+attendance/facenet/dataset/aligned/charitesh/charitesh14.png 103 127 301 385
+attendance/facenet/dataset/aligned/charitesh/charitesh2.png 142 171 407 484
+attendance/facenet/dataset/aligned/charitesh/charitesh8.png 60 129 309 441
+attendance/facenet/dataset/aligned/charitesh/charitesh1.png 142 171 407 484
+attendance/facenet/dataset/aligned/charitesh/charitesh18.png 16 36 132 172
+attendance/facenet/dataset/aligned/kousthubha/kou4.png 1 411 514 1088
+attendance/facenet/dataset/aligned/kousthubha/3.kousthubha.png 226 217 507 558
+attendance/facenet/dataset/aligned/kousthubha/kou1.png 166 123 632 726
+attendance/facenet/dataset/aligned/kousthubha/kou6.png 207 390 621 953
+attendance/facenet/dataset/aligned/kousthubha/kou10.png 216 299 593 781
+attendance/facenet/dataset/aligned/kousthubha/5.kousthubha.png 226 195 520 575
+attendance/facenet/dataset/aligned/kousthubha/1.kousthuba.png 227 209 502 570
+attendance/facenet/dataset/aligned/kousthubha/2.kousthubha.png 219 211 500 565
+attendance/facenet/dataset/aligned/kousthubha/kou7.png 146 260 573 819
+attendance/facenet/dataset/aligned/kousthubha/4.kousthubha.png 186 220 478 574
+attendance/facenet/dataset/aligned/kousthubha/9.kousthubha.png 179 274 443 587
+attendance/facenet/dataset/aligned/kousthubha/6.kousthubha.png 202 258 483 580
+attendance/facenet/dataset/aligned/kousthubha/kou9.png 230 303 623 845
+attendance/facenet/dataset/aligned/kousthubha/kou8.png 97 321 475 828
+attendance/facenet/dataset/aligned/kousthubha/kou12.png 204 448 501 814
+attendance/facenet/dataset/aligned/kousthubha/kou11.png 173 100 640 815
+attendance/facenet/dataset/aligned/kousthubha/7.kousthubha.png 182 237 484 598
+attendance/facenet/dataset/aligned/kousthubha/kou5.png 32 316 550 989
+attendance/facenet/dataset/aligned/kousthubha/kou2.png 175 376 547 855
+attendance/facenet/dataset/aligned/kousthubha/8.kousthubha.png 188 215 480 584
+attendance/facenet/dataset/aligned/kousthubha/kou3.png 98 355 517 898
+attendance/facenet/dataset/aligned/meenan/meenan_4.png 354 90 766 583
+attendance/facenet/dataset/aligned/meenan/meenan9.png 105 237 565 831
+attendance/facenet/dataset/aligned/meenan/meenan2.png 194 303 655 897
+attendance/facenet/dataset/aligned/meenan/meenan3.png 219 314 632 838
+attendance/facenet/dataset/aligned/meenan/meenan8.png 332 273 806 906
+attendance/facenet/dataset/aligned/meenan/meenan_2.png 179 111 579 586
+attendance/facenet/dataset/aligned/meenan/meenan_7.png 345 75 760 572
+attendance/facenet/dataset/aligned/meenan/meenan10.png 143 230 596 823
+attendance/facenet/dataset/aligned/meenan/meenan4.png 292 285 701 809
+attendance/facenet/dataset/aligned/meenan/meenan6.png 84 241 523 796
+attendance/facenet/dataset/aligned/meenan/meenan_6.png 345 75 760 572
+attendance/facenet/dataset/aligned/meenan/meenan_8.png 375 35 780 530
+attendance/facenet/dataset/aligned/meenan/meenan_5.png 345 75 760 572
+attendance/facenet/dataset/aligned/meenan/meenan7.png 130 260 582 802
+attendance/facenet/dataset/aligned/meenan/meenan_10.png 246 97 630 550
+attendance/facenet/dataset/aligned/meenan/meenan1.png 240 253 676 792
+attendance/facenet/dataset/aligned/meenan/meenan_1.png 375 35 780 530
+attendance/facenet/dataset/aligned/meenan/meenan5.png 219 314 632 838
+attendance/facenet/dataset/aligned/meenan/meenan_3.png 238 95 526 561
+attendance/facenet/dataset/aligned/meenan/meenan_9.png 179 111 579 586
+attendance/facenet/dataset/aligned/priyatam/IMG_3297.png 221 64 400 276
+attendance/facenet/dataset/aligned/priyatam/WhatsApp Image 2019-08-13 at 8.26.09 PM(3).png 299 218 648 653
+attendance/facenet/dataset/aligned/priyatam/WhatsApp Image 2019-08-13 at 8.26.09 PM.png 246 138 614 594
+attendance/facenet/dataset/aligned/priyatam/WhatsApp Image 2019-08-13 at 8.26.10 PM(1).png 236 180 681 717
+attendance/facenet/dataset/aligned/priyatam/IMG_3296.png 194 91 399 296
+attendance/facenet/dataset/aligned/priyatam/9.png 12 25 249 314
+attendance/facenet/dataset/aligned/priyatam/11.png 0 54 208 354
+attendance/facenet/dataset/aligned/priyatam/IMG_3295.png
+attendance/facenet/dataset/aligned/priyatam/IMG_3294.png 238 103 445 314
+attendance/facenet/dataset/aligned/priyatam/7.png 31 6 261 305
+attendance/facenet/dataset/aligned/priyatam/WhatsApp Image 2019-08-13 at 8.26.09 PM(2).png 247 258 568 668
+attendance/facenet/dataset/aligned/priyatam/12.png 30 81 268 363
+attendance/facenet/dataset/aligned/priyatam/WhatsApp Image 2019-08-13 at 8.26.09 PM(4).png 315 253 646 675
+attendance/facenet/dataset/aligned/priyatam/WhatsApp Image 2019-08-13 at 8.26.10 PM(2).png 296 229 659 679
+attendance/facenet/dataset/aligned/priyatam/WhatsApp Image 2019-08-13 at 8.26.09 PM(5).png 341 260 676 690
+attendance/facenet/dataset/aligned/priyatam/WhatsApp Image 2019-08-13 at 8.26.09 PM(1).png 266 135 646 598
+attendance/facenet/dataset/aligned/priyatam/8.png 33 68 267 355
+attendance/facenet/dataset/aligned/priyatam/WhatsApp Image 2019-08-13 at 8.26.10 PM.png 206 186 607 684
+attendance/facenet/dataset/aligned/priyatam/10.png 14 53 262 348
+attendance/facenet/dataset/aligned/rakesh/rakesh10.png 227 225 555 649
+attendance/facenet/dataset/aligned/rakesh/rakesh6.png 254 246 634 739
+attendance/facenet/dataset/aligned/rakesh/rakesh7.png 249 206 640 727
+attendance/facenet/dataset/aligned/rakesh/rakesh18.png 233 266 570 710
+attendance/facenet/dataset/aligned/rakesh/rakesh11.png 240 182 600 648
+attendance/facenet/dataset/aligned/rakesh/rakesh3.png 272 169 687 738
+attendance/facenet/dataset/aligned/rakesh/rakesh16.png 249 195 596 650
+attendance/facenet/dataset/aligned/rakesh/rakesh15.png 276 304 609 731
+attendance/facenet/dataset/aligned/rakesh/rakesh17.png 227 212 602 721
+attendance/facenet/dataset/aligned/rakesh/rakesh12.png 227 207 563 656
+attendance/facenet/dataset/aligned/rakesh/rakesh2.png 254 237 641 740
+attendance/facenet/dataset/aligned/rakesh/rakesh19.png 353 174 643 564
+attendance/facenet/dataset/aligned/rakesh/rakesh13.png 241 236 586 680
+attendance/facenet/dataset/aligned/rakesh/rakesh9.png 252 248 628 741
+attendance/facenet/dataset/aligned/rakesh/rakesh5.png 264 198 661 716
+attendance/facenet/dataset/aligned/rakesh/rakesh14.png 250 208 582 651
+attendance/facenet/dataset/aligned/rakesh/rakesh4.png 290 208 681 742
+attendance/facenet/dataset/aligned/rakesh/rakesh8.png 279 172 666 714
+attendance/facenet/dataset/aligned/saicharan/WhatsApp Image 2020-04-09 at 4.27.37 PM.png 446 268 594 442
+attendance/facenet/dataset/aligned/saicharan/WhatsApp Image 2020-04-09 at 4.27.42 PM.png 743 263 1064 673
+attendance/facenet/dataset/aligned/saicharan/WhatsApp Image 2020-04-09 at 4.27.38 PM(1).png 758 177 1117 613
+attendance/facenet/dataset/aligned/saicharan/WhatsApp Image 2020-04-09 at 4.27.43 PM.png 409 135 889 717
+attendance/facenet/dataset/aligned/saicharan/WhatsApp Image 2020-04-09 at 4.27.46 PM.png 265 292 532 627
+attendance/facenet/dataset/aligned/saicharan/WhatsApp Image 2020-04-09 at 4.27.44 PM.png 454 93 576 240
+attendance/facenet/dataset/aligned/saicharan/WhatsApp Image 2020-04-09 at 4.27.38 PM.png 436 519 810 997
+attendance/facenet/dataset/aligned/saicharan/WhatsApp Image 2020-04-09 at 4.27.42 PM(1).png 164 86 305 259
+attendance/facenet/dataset/aligned/saicharan/WhatsApp Image 2020-04-09 at 4.27.41 PM.png 283 395 650 837
+attendance/facenet/dataset/aligned/saicharan/WhatsApp Image 2020-04-09 at 4.27.40 PM(1).png 87 27 221 186
+attendance/facenet/dataset/aligned/saicharan/WhatsApp Image 2020-04-09 at 4.27.39 PM.png 297 236 470 439
+attendance/facenet/dataset/aligned/saicharan/WhatsApp Image 2020-04-09 at 4.27.40 PM.png 150 226 490 646
+attendance/facenet/dataset/aligned/sairaj/sairaj16.png 259 416 589 857
+attendance/facenet/dataset/aligned/sairaj/sairaj11.png 236 391 574 855
+attendance/facenet/dataset/aligned/sairaj/sairaj9.png 234 401 566 847
+attendance/facenet/dataset/aligned/sairaj/sairaj14.png 250 432 588 896
+attendance/facenet/dataset/aligned/sairaj/sairaj6.png 222 441 582 910
+attendance/facenet/dataset/aligned/sairaj/sairaj10.png 252 436 588 892
+attendance/facenet/dataset/aligned/sairaj/sairaj17.png 189 418 552 894
+attendance/facenet/dataset/aligned/sairaj/sairaj7.png 240 475 606 981
+attendance/facenet/dataset/aligned/sairaj/sairaj8.png 255 445 575 893
+attendance/facenet/dataset/aligned/sairaj/sairaj15.png 269 422 607 871
+attendance/facenet/dataset/aligned/sairaj/sairaj13.png 206 396 551 850
+attendance/facenet/dataset/aligned/sairaj/sairaj2.png 276 435 595 881
+attendance/facenet/dataset/aligned/sairaj/sairaj12.png 244 498 605 981
+attendance/facenet/dataset/aligned/sairaj/sairaj4.png 174 451 503 883
+attendance/facenet/dataset/aligned/sairaj/sairaj1.png 208 433 554 896
+attendance/facenet/dataset/aligned/sairaj/sairaj3.png 111 431 496 912
+attendance/facenet/dataset/aligned/sairaj/sairaj5.png 215 434 554 877
+attendance/facenet/dataset/aligned/sairohith/rohith1.png 220 246 524 653
+attendance/facenet/dataset/aligned/sairohith/rohith16.png 224 253 528 637
+attendance/facenet/dataset/aligned/sairohith/rohith19.png 234 259 540 676
+attendance/facenet/dataset/aligned/sairohith/rohith17.png 174 307 466 714
+attendance/facenet/dataset/aligned/sairohith/rohith9.png 263 294 560 690
+attendance/facenet/dataset/aligned/sairohith/rohith3.png 227 230 571 707
+attendance/facenet/dataset/aligned/sairohith/rohith11.png 208 349 535 780
+attendance/facenet/dataset/aligned/sairohith/rohith20.png 224 212 551 671
+attendance/facenet/dataset/aligned/sairohith/rohith7.png 206 241 530 700
+attendance/facenet/dataset/aligned/sairohith/rohith21.png 211 142 557 597
+attendance/facenet/dataset/aligned/sairohith/rohith10.png 252 225 549 642
+attendance/facenet/dataset/aligned/sairohith/rohith14.png 234 248 543 639
+attendance/facenet/dataset/aligned/sairohith/rohith18.png 260 251 574 654
+attendance/facenet/dataset/aligned/sairohith/rohith2.png 253 205 558 612
+attendance/facenet/dataset/aligned/sairohith/rohith13.png 245 280 539 685
+attendance/facenet/dataset/aligned/sairohith/rohith6.png 313 273 622 710
+attendance/facenet/dataset/aligned/sairohith/rohith12.png 215 242 546 696
+attendance/facenet/dataset/aligned/sairohith/rohith5.png 242 257 555 675
+attendance/facenet/dataset/aligned/sairohith/rohith4.png 267 259 556 624
+attendance/facenet/dataset/aligned/sairohith/rohith8.png 263 294 560 690
+attendance/facenet/dataset/aligned/sairohith/rohith15.png 226 270 491 619
+attendance/facenet/dataset/aligned/shivasai/shivasai2.png 145 134 614 782
+attendance/facenet/dataset/aligned/shivasai/shivasai9.png 93 144 586 825
+attendance/facenet/dataset/aligned/shivasai/shivasai7.png 94 89 645 852
+attendance/facenet/dataset/aligned/shivasai/shivasai3.png 114 195 590 842
+attendance/facenet/dataset/aligned/shivasai/shivasai6.png 89 170 597 888
+attendance/facenet/dataset/aligned/shivasai/shivasai1.png 127 220 551 821
+attendance/facenet/dataset/aligned/shivasai/shivasai10.png 41 96 608 865
+attendance/facenet/dataset/aligned/shivasai/shivasai13.png 93 144 586 825
+attendance/facenet/dataset/aligned/shivasai/shivasai4.png 114 143 559 755
+attendance/facenet/dataset/aligned/shivasai/shivasai5.png 108 191 556 821
+attendance/facenet/dataset/aligned/shivasai/shivasai11.png 109 168 600 841
+attendance/facenet/dataset/aligned/shivasai/shivasai8.png 102 77 622 771
+attendance/facenet/dataset/aligned/shivasai/shivasai12.png 113 250 592 876
+attendance/facenet/dataset/aligned/supreet/supreet24.png 322 422 682 888
+attendance/facenet/dataset/aligned/supreet/supreet12.png 415 492 749 913
+attendance/facenet/dataset/aligned/supreet/supreet6.png 271 379 663 916
+attendance/facenet/dataset/aligned/supreet/supreet11.png 399 427 778 923
+attendance/facenet/dataset/aligned/supreet/supreet2.png 303 360 670 833
+attendance/facenet/dataset/aligned/supreet/supreet16.png 179 168 590 709
+attendance/facenet/dataset/aligned/supreet/supreet5.png 361 474 738 970
+attendance/facenet/dataset/aligned/supreet/supreet20.png 423 437 742 852
+attendance/facenet/dataset/aligned/supreet/supreet8.png 416 271 784 752
+attendance/facenet/dataset/aligned/supreet/supreet19.png 525 246 878 722
+attendance/facenet/dataset/aligned/supreet/supreet21.png 404 439 710 837
+attendance/facenet/dataset/aligned/supreet/supreet13.png 223 352 551 751
+attendance/facenet/dataset/aligned/supreet/supreet14.png 418 349 733 761
+attendance/facenet/dataset/aligned/supreet/supreet9.png 419 527 727 913
+attendance/facenet/dataset/aligned/supreet/supreet10.png 448 500 783 915
+attendance/facenet/dataset/aligned/supreet/supreet22.png 362 502 671 893
+attendance/facenet/dataset/aligned/supreet/supreet17.png 339 413 662 831
+attendance/facenet/dataset/aligned/supreet/supreet7.png 269 374 672 917
+attendance/facenet/dataset/aligned/supreet/supreet18.png 331 255 738 784
+attendance/facenet/dataset/aligned/supreet/supreet1.png 187 173 552 661
+attendance/facenet/dataset/aligned/supreet/supreet3.png 376 286 744 747
+attendance/facenet/dataset/aligned/supreet/supreet4.png 308 396 686 883
+attendance/facenet/dataset/aligned/supreet/supreet23.png 245 390 471 688

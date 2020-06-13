@@ -1,0 +1,7 @@
+arguments: attendance/facenet/src/align/align_dataset_mtcnn.py attendance/facenet/dataset/raw attendance/facenet/dataset/aligned --image_size 160 --margin 32
+--------------------
+tensorflow version: 1.14.0
+--------------------
+git hash: b'HEAD'
+--------------------
+b''
