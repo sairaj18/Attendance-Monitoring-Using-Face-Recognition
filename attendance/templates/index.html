@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width,initial-scale=1.0">
+		<meta charset="utf-8">
+		<title>AMFR</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+		<script type="text/javascript">
+			$(window).on('load',function(){
+				$('.preloader').addClass('complete')
+			})
+		</script>
+	</head>
+	<body data-spy="scroll" date-target=".navbar" data-offset="50">
+		<header>
+			<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+				<div class="container">
+				  <a class="navbar-brand" href="#">AMFR</a>
+				  <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				    <span class="navbar-toggler-icon"></span>
+				  </button>
+
+				  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+				    <ul class="navbar-nav ml-lg-auto">
+				      <li class="nav-item">
+				        <a class="nav-link" href="#home">Home <span class="sr-only">(current)</span></a>
+				      </li>
+				      <li class="nav-item">
+				        <a class="nav-link" href="#explore">Explore</a>
+				      </li>
+				      <li class="nav-item">
+				        <a class="nav-link" href="#launch">Launch</a>
+				      </li>
+				      <li class="nav-item">
+				        <a class="nav-link" href="#blog">Blog</a>
+				      </li>
+				      <li class="nav-item">
+				        <a class="nav-link" href="#contact">Contact</a>
+				      </li>
+              {% if current_user.is_authenticated %}
+				        <li class="nav-item">
+                  <a class="nav-item nav-link" href="{{ url_for('logout') }}">Logout</a>
+                </li>
+              {% else %}  
+                <li>
+                  <a class="nav-item nav-link" href="{{ url_for('login') }}">Login</a>
+                </li>
+                <li>
+                  <a class="nav-item nav-link" href="{{ url_for('register') }}">Register</a>
+                </li>
+              {% endif %}
+				    </ul>
+				  </div>
+				</div>
+			</nav>
+		</header>
+		<div class="main">
+			<div class="container">
+				<div class="row">
+					<div class="col">
+						{% with messages = get_flashed_messages(with_categories= true) %}
+							{% if messages %}
+								{% for category,message in messages %}
+									<div class="alert alert-{{category}}">
+										{{ message }}
+									</div>
+								{% endfor %}
+							{% endif %}
+						{% endwith %}	
+						{% block content %} {% endblock %}
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="jumbotron jumbotron-fluid height100p banner" id="home">
+		  <div class="container h100">
+		  	<div class="contentBox h100">
+		  		<div>
+		  			<h1 data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">Attendance Monitoring</h1>
+		  			<p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">The application uses google facenet to recognize students and mark attendance to the students. A high defintion picture has to be uploaded, so that faces are sharp to recoginze.</p>
+		  		</div>
+		  	</div>
+		  </div>
+		</div>
+		<section class="sec1" id="explore">
+			<div class="container">
+				<div class="row">
+					<div class="offset-sm-2 col-sm-8">
+						<div class="headerText text-center">
+							<h2 data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">Explore AMRF</h2>
+							<p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
+								All options which you want to explore are available below. 
+							</p>
+						</div>	
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-4">
+						<div class="placeBox" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
+							<div class="imgBx">
+								<img src="{{ url_for('static', filename='images/img1.jpg') }}" class="img-fluid">
+							</div>
+							<div class="content text-center">
+								<a href="{{url_for('static', filename='AMFR-ful-record.pdf')}}" target="_blank" class="btn btnD1">About Project</a>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-4">
+						<div class="placeBox" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="250">
+							<div class="imgBx">
+								<img src="{{ url_for('static', filename='images/img2.jpg') }}" class="img-fluid">
+							</div>
+							<div class="content text-center">
+								<a href="{{ url_for('add_class') }}" class="btn btnD1">Add Class</a>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-4">
+						<div class="placeBox" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
+							<div class="imgBx">
+								<img src="{{ url_for('static', filename='images/img3.png') }}" class="img-fluid">
+							</div>
+							<div class="content text-center">
+								<a href="{{ url_for('take_attendance')}}" class="btn btnD1">Take Attendance</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="sec2" id="launch">
+			<div class="container h100">
+				<div class="contentBox h100">
+					<div>
+						<h1 data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">AI is Everywhere</h1>
+						<p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+							tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+							quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+							consequat. 
+						</p>
+						<a href="#" class="btn btnD3" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">Read More</a>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="blog" id="blog">
+			<div class="container">
+				<div class="row">
+					<div class="offset-sm-2 col-sm-8">
+						<div class="headerText text-center">
+							<h2 data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">About Our Latest Post</h2>
+							<p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">With the exploding amount of mobile traffic data and unprecedented demands of computing, executing the ever increasingly complex applications in resource-constrained mobile devices becomes more and more challenging.</p>
+							<a href="{{ url_for('dmc') }}" class="btn btnD3" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">Read More</a>
+						</div>						
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-6">
+						<div class="blogpost" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+							<div class="imgBx">
+								<img src="{{ url_for('static', filename='images/comv.png') }}" class="img-fluid">
+							</div>
+							<div class="content">
+								<h1>Computer vision: A Vision Of Future</h1>
+								<p>Computer vision is an interdisciplinary scientific field that deals with how computers can gain high-level understanding from digital images or videos......</p>
+								<a href="{{ url_for('cv') }}" class="btn btnD2">Read More</a>
+								<div class="clearfix"></div>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-6">
+						<div class="blogpost" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
+							<div class="imgBx">
+								<img src="{{ url_for('static', filename='images/mob.jpg') }}" class="img-fluid">
+							</div>
+							<div class="content">
+								<h1>Deep Mobile Computing</h1>
+								<p>With the exploding amount of mobile traffic data and unprecedented demands of computing, executing the ever increasingly complex applications in resource......</p>
+								<a href="{{ url_for('dmc') }}" class="btn btnD2">Read More</a>
+								<div class="clearfix"></div>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-6">
+						<div class="blogpost" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+							<div class="imgBx">
+								<img src="{{ url_for('static', filename='images/flask.png') }}" class="img-fluid">
+							</div>
+							<div class="content">
+								<h1>Flask: A Developer’s Tool</h1>
+								<p>Flask is a micro web framework written in Python. It is classified as a microframework because it does not require particular tools or libraries......</p>
+								<a href="{{ url_for('flsk') }}" class="btn btnD2">Read More</a>
+								<div class="clearfix"></div>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-6">
+						<div class="blogpost" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
+							<div class="imgBx">
+								<img src="{{ url_for('static', filename='images/sqlytdb.png') }}" class="img-fluid">
+							</div>
+							<div class="content">
+								<h1>SQLite: A database</h1>
+								<p>SQLite is a relational database management system (RDBMS) contained in a C library. In contrast to many other database management systems......</p>
+								<a href="{{ url_for('sqlyt') }}" class="btn btnD2">Read More</a>
+								<div class="clearfix"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="contact" id="contact">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-12">
+						<div class="headerText text-center">
+							<h2 data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">Contact Us</h2>
+							<p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">for more information regarding the application you can contact us</p>
+						</div>
+					</div>
+				</div>
+				<div class="row clearfix">
+					<div class="offset-sm-2 col-sm-8">
+						<form data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+							<div class="form-group">
+								<label>Name</label>
+								<input type="text" name="" class="form-control">
+							</div>
+							<div class="form-group">
+								<label>Email</label>
+								<input type="text" name="" class="form-control">
+							</div>
+							<div class="form-group">
+								<label>Phone</label>
+								<input type="text" name="" class="form-control">
+							</div>
+							<div class="form-group">
+								<label>Feedback</label>
+								<textarea class="form-control textarea" name=""></textarea>
+							</div>
+							<div class="form-group text-center">
+								<br>
+								<button class="btn btnD4">Send</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</section>
+		<footer>
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-12">
+						<ul class="sci">
+							<li>
+								<a href="#">
+									<i class="fa fa-facebook"></i><!--use fontawesome icon -->
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<i class="fa fa-twitter"></i><!--use fontawesome icon -->
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<i class="fa fa-google-plus"></i><!--use fontawesome icon -->
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<i class="fa fa-linkedin"></i><!--use fontawesome icon -->
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<i class="fa fa-instagram"></i><!--use fontawesome icon -->
+								</a>
+							</li>
+						</ul>
+						<p class="cpryt">© Copyright 2020 AMFR | Template by <a href="#">sairaj_priyatam</a></p>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+		<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+		<script>
+			AOS.init();
+		</script>
+		<script type="text/javascript">
+			$(document).scroll(function(){
+				$('.navbar').toggleClass('scrolled', $(this).scrollTop() > $('.navbar').height());
+			});
+		</script>
+	</body>
+</html>

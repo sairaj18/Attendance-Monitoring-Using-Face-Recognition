@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Add-New-Class</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1.0">
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='add_class.css') }}">
+	</head>
+	<body>
+		{% block content %}
+		<header>
+			<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+				<div class="container">
+				  <a class="navbar-brand" href="#">AMFR</a>
+				  <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				    <span class="navbar-toggler-icon"></span>
+				  </button>
+				  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+				    <ul class="navbar-nav ml-lg-auto">
+				      <li class="nav-item">
+				        <a class="nav-link" href="{{ url_for('index') }}">Home <span class="sr-only">(current)</span></a>
+				      </li>
+				      <li class="nav-item">
+				        <a class="nav-link" href="{{ url_for('take_attendance') }}">Take Attendance<span class="sr-only">(current)</span></a>
+				      </li>
+	          		  	{% if current_user.is_authenticated %}
+					        <li class="nav-item">
+			                  <a class="nav-item nav-link" href="{{ url_for('logout') }}">Logout</a>
+			                </li>
+			              	{% else %}  
+			                <li>
+			                  <a class="nav-item nav-link" href="{{ url_for('login') }}">Login</a>
+			                </li>
+			                <li>
+			                  <a class="nav-item nav-link" href="{{url_for('register') }}">Register</a>
+			                </li>
+		              	{% endif %}
+				    </ul>
+				  </div>
+				</div>
+			</nav>
+		</header>
+		<div class="main">
+			<div class="container">
+				<div class="row">
+					<div class="col">
+						{% with messages = get_flashed_messages(with_categories= true) %}
+							{% if messages %}
+								{% for category,message in messages %}
+									<div class="alert alert-{{category}}">
+										{{ message }}
+									</div>
+								{% endfor %}
+							{% endif %}
+						{% endwith %}	
+					</div>
+				</div>
+			</div>
+		</div>
+		<section class="addclasscontact">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="headerText text-center">
+							<h1 data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">CREATE NEW CLASS</h1>
+						</div>
+					</div>
+				</div>
+				<div class="row clearfix">
+					<div class="offset-sm-2 col-sm-8">
+						<form action="/add" enctype="multipart/form-data" method="POST" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+							<div class="form-row">
+								<div class="form-group col-md-6">
+									<label>Class Name</label>
+								</div>
+								<div class="form-group col-md-4">
+									<label>No of Students</label>
+								</div>
+							</div>
+							<div class="form-row">
+								<div class="form-group col-md-6">
+									<input class="form-control" type="text" name="classname">
+								</div>
+								<div class="form-group col-md-4">
+									<input class="form-control" type="text" name="noofstu" id="noofstu">
+								</div>
+								<div class="form-group col-md-2">
+									<input class="btn btnD4 text-center" type="button" value="Generate Feilds" id="addFields"/>
+								</div>
+							</div>
+							<div class="form-row">
+								<div class="form-group col-md-6">
+									<label>Co-ordinator Name</label>
+								</div>
+								<div class="form-group col-md-6">
+									<label>Co-ordinator Email</label>
+								</div>
+							</div>
+							<div class="form-row">
+								<div class="form-group col-md-6">
+									<input class="form-control" type="text" name="coorname">
+								</div>
+								<div class="form-group col-md-6">
+									<input class="form-control" type="text" name="cooremail">
+								</div>
+							</div>
+							<div class="form-row" id="pre">
+								
+							</div>
+							<div class="form-row">
+								<div class="form-group col-md-6">
+									<button class="btn btnD4" type="submit" name="create">Create</button>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</section>
+		{% endblock %}
+		<footer>
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-12">
+						<ul class="sci">
+							<li>
+								<a href="#">
+									<i class="fa fa-facebook"></i><!--use fontawesome icon -->
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<i class="fa fa-twitter"></i><!--use fontawesome icon -->
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<i class="fa fa-google-plus"></i><!--use fontawesome icon -->
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<i class="fa fa-linkedin"></i><!--use fontawesome icon -->
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<i class="fa fa-instagram"></i><!--use fontawesome icon -->
+								</a>
+							</li>
+						</ul>
+						<p class="cpryt">© Copyright 2020 AMFR | Template by <a href="#">sairaj_priyatam</a></p>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+		<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+		<script>
+			AOS.init();
+		</script>
+		<script type="text/javascript">
+			$(document).scroll(function(){
+				$('.navbar').toggleClass('scrolled', $(this).scrollTop() > $('.navbar').height());
+			});
+			$(document).ready(function(){
+        $("#addFields").on("click",function(){
+				$number_of_columns = $("#noofstu").val();
+	            $number_of_columns = parseInt($number_of_columns);
+	            for($i=0; $i<$number_of_columns; $i++)
+	            {
+	                $new_element ='<div class="form-group col-md-4"><label>Student Name</label><input class="form-control" type="text" name="namefields[]"></div><div class="form-group col-md-4"><label>Phone Number</label><input class="form-control" type="text" name="phonefields[]"></div><div class="form-group col-md-4"><label>Roll Number</label><input class="form-control" type="text" name="rollfields[]"></div>';
+	                $("#pre").append($new_element);   
+	            }
+	        });
+    	});	
+		</script>
+	</body>
+</html>

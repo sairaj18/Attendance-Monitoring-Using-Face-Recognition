@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Deep MC Info</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1.0">
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+	</head>
+	<body>
+		<header>
+			<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+				<div class="container">
+				  <a class="navbar-brand" href="#">AMFR</a>
+				  <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				    <span class="navbar-toggler-icon"></span>
+				  </button>
+
+				  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+				    <ul class="navbar-nav ml-lg-auto">
+				      <li class="nav-item">
+				        <a class="nav-link" href="{{ url_for('index')}}">Home <span class="sr-only">(current)</span></a>
+				      </li>
+              {% if current_user.is_authenticated %}
+				        <li class="nav-item">
+                  <a class="nav-item nav-link" href="{{ url_for('logout') }}">Logout</a>
+                </li>
+              {% else %}  
+                <li>
+                  <a class="nav-item nav-link" href="{{ url_for('login') }}">Login</a>
+                </li>
+                <li>
+                  <a class="nav-item nav-link" href="{{ url_for('register') }}">Register</a>
+                </li>
+              {% endif %}
+				    </ul>
+				  </div>
+				</div>
+			</nav>
+		</header>
+		<div class="jumbotron jumbotron-fluid height100p banner" id="home">
+		  <div class="container h100">
+		  	<div class="contentBox h100">
+		  		<div>
+		  			<h1 data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">Deep Mobile Computing</h1>
+		  			<p data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">With the exploding amount of mobile traffic data and unprecedented demands of computing, executing the ever increasingly complex applications in resource-constrained mobile devices becomes more and more challenging. Future wireless communications will be very complex with heterogeneous radio access technologies, transmission links, and network slices. More intelligent technologies are required to address those complex scenarios and to adapt to dynamic mobile environments. Recently, deep learning has attracted much attention in the field of wireless communication and mobile computing. Deep learning driven algorithms and models can facilitate wireless network analysis and resource management, benefit in coping with the growth in volumes of communication and computation for emerging mobile applications. However, how to customize deep learning techniques for heterogeneous mobile environments is still under development. Learning algorithms in mobile wireless systems are immature and inefficient. In this special issue on deep learning driven wireless communication and mobile computing, we have accepted seven papers that include both theoretical contributions and practical research related to the new technologies, analysis, and applications with the help of artificial intelligence and deep learning.With the exploding amount of mobile traffic data and unprecedented demands of computing, executing the ever increasingly complex applications in resource-constrained mobile devices becomes more and more challenging. Future wireless communications will be very complex with heterogeneous radio access technologies, transmission links, and network slices. More intelligent technologies are required to address those complex scenarios and to adapt to dynamic mobile environments. Recently, deep learning has attracted much attention in the field of wireless communication and mobile computing. Deep learning driven algorithms and models can facilitate wireless network analysis and resource management, benefit in coping with the growth in volumes of communication and computation for emerging mobile applications.</p>
+		  		</div>
+		  	</div>
+		  </div>
+		</div>
+		<footer>
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-12">
+						<ul class="sci">
+							<li>
+								<a href="#">
+									<i class="fa fa-facebook"></i><!--use fontawesome icon -->
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<i class="fa fa-twitter"></i><!--use fontawesome icon -->
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<i class="fa fa-google-plus"></i><!--use fontawesome icon -->
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<i class="fa fa-linkedin"></i><!--use fontawesome icon -->
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<i class="fa fa-instagram"></i><!--use fontawesome icon -->
+								</a>
+							</li>
+						</ul>
+						<p class="cpryt">© Copyright 2020 AMFR | Template by <a href="#">sairaj_priyatam</a></p>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+		<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+		<script>
+			AOS.init();
+		</script>
+		<script type="text/javascript">
+			$(document).scroll(function(){
+				$('.navbar').toggleClass('scrolled', $(this).scrollTop() > $('.navbar').height());
+			});
+		</script>
+	</body>
+</html>

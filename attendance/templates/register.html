@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Registeration Page</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1.0">
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='register.css') }}">
+	</head>
+	<body>
+		{% block content %}
+		<header>
+			<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+				<div class="container">
+				  <a class="navbar-brand" href="#">AMFR</a>
+				  <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				    <span class="navbar-toggler-icon"></span>
+				  </button>
+				  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+				    <ul class="navbar-nav ml-lg-auto">
+				      <li class="nav-item">
+				        <a class="nav-link" href="{{ url_for('index') }}">Home <span class="sr-only">(current)</span></a>
+				      </li>
+	          		  	{% if current_user.is_authenticated %}
+					        <li class="nav-item">
+			                  <a class="nav-item nav-link" href="{{ url_for('logout') }}">Logout</a>
+			                </li>
+			              	{% else %}  
+			                <li>
+			                  <a class="nav-item nav-link" href="{{ url_for('login') }}">Login</a>
+			                </li>
+		              	{% endif %}
+				    </ul>
+				  </div>
+				</div>
+			</nav>
+		</header>
+		<section class="registercontact" id="register">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-12">
+						<div class="headerText text-center">
+							<h1 data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">JOIN TODAY</h1>
+						</div>
+					</div>
+				</div>
+				<div class="row clearfix">
+					<div class="offset-sm-2 col-sm-8">
+						<form method="POST" action="" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+							{{ form.hidden_tag() }}
+							<fieldset class="form-group">
+								<div class="form-group">
+									<label>Name</label>
+									{% if form.username.errors %}
+										{{ form.username(class="form-control") }}
+										<div class="invalid-feedback">
+											{% for error in form.username.errors %}
+												<span>{{ error }}</span>
+											{% endfor %}
+										</div>
+									{% else %}
+										{{ form.username(class="form-control") }}	
+									{% endif %}
+								</div>
+								<div class="form-group">
+									<label>Email</label>
+									{% if form.email.errors %}
+										{{ form.email(class="form-control") }}
+										<div class="invalid-feedback">
+											{% for error in form.email.errors %}
+												<span>{{ error }}</span>
+											{% endfor %}
+										</div>	
+									{% else %}
+										{{ form.email(class="form-control") }}
+									{% endif %}
+								</div>
+								<div class="form-group">
+									<label>Password</label>
+									{% if form.password.errors %}
+										{{ form.password(class="form-control") }}
+										<div class="invalid-feedback">
+											{% for error in form.password.errors %}
+												<span>{{ error}}</span>
+											{% endfor %}
+										</div>
+									{% else %}	
+										{{ form.password(class="form-control") }}
+									{% endif %}
+								</div>
+								<div class="form-group">
+									<label>Confirm Password</label>
+									{% if form.confirm_password.errors %}
+										{{ form.confirm_password(class="form-control") }}
+										<div class="invalid-feedback">
+											{% for error in form.confirm_password.errors %}
+											<span>{{ error }}</span>
+											{% endfor %}
+										</div>
+									{% else %}
+										{{ form.confirm_password(class="form-control") }}
+									{% endif %}	
+								</div>
+						</fieldset>
+						<div class="form-group text-center">
+							{{ form.submit(class="btn btnD4") }}
+						</div>
+						</form>
+					</div>
+				</div>
+			</div>	
+		</section>
+		{% endblock %}
+		<footer>
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-12">
+						<ul class="sci">
+							<li>
+								<a href="#">
+									<i class="fa fa-facebook"></i><!--use fontawesome icon -->
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<i class="fa fa-twitter"></i><!--use fontawesome icon -->
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<i class="fa fa-google-plus"></i><!--use fontawesome icon -->
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<i class="fa fa-linkedin"></i><!--use fontawesome icon -->
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<i class="fa fa-instagram"></i><!--use fontawesome icon -->
+								</a>
+							</li>
+						</ul>
+						<p class="cpryt">© Copyright 2020 AMFR | Template by <a href="#">sairaj_priyatam</a></p>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+		<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+		<script>
+			AOS.init();
+		</script>
+		<script type="text/javascript">
+			$(document).scroll(function(){
+				$('.navbar').toggleClass('scrolled', $(this).scrollTop() > $('.navbar').height());
+			});
+		</script>
+	</body>
+</html>

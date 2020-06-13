@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Take Attendance</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1.0">
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='take_attendance.css') }}">
+	</head>
+	<body>
+		<header>
+			<nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+				<div class="container">
+				  <a class="navbar-brand" href="#">AMFR</a>
+				  <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				    <span class="navbar-toggler-icon"></span>
+				  </button>
+				  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+				    <ul class="navbar-nav ml-lg-auto">
+				      <li class="nav-item">
+				        <a class="nav-link" href="{{ url_for('index') }}">Home</a>
+				      </li>
+				      <li class="nav-item">
+				        <a class="nav-link" href="{{ url_for('add_class') }}">Add Class</a>
+				      </li>
+	          		  	{% if current_user.is_authenticated %}
+					        <li class="nav-item">
+			                  <a class="nav-item nav-link" href="{{ url_for('logout') }}">Logout</a>
+			                </li>
+			              	{% else %}  
+			                <li>
+			                  <a class="nav-item nav-link" href="{{ url_for('login') }}">Login</a>
+			                </li>
+			                <li>
+			                  <a class="nav-item nav-link" href="{{ url_for('register') }}">Register</a>
+			                </li>
+		              	{% endif %}
+				    </ul>
+				  </div>
+				</div>
+			</nav>
+		</header>
+		<div class="main">
+			<div class="container">
+				<div class="row">
+					<div class="col">
+						{% with messages = get_flashed_messages(with_categories= true) %}
+							{% if messages %}
+								{% for category,message in messages %}
+									<div class="alert alert-{{category}}">
+										{{ message }}
+									</div>
+								{% endfor %}
+							{% endif %}
+						{% endwith %}	
+						{% block content %} {% endblock %}
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="takecontact">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-12">
+						<div class="headerText text-center">
+							<h1 data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">MARK ATTENDANCE</h1>
+						</div>
+					</div>
+				</div>
+				<div class="row clearfix">
+					<div class="offset-sm-2 col-sm-8">
+						<form method="POST" action="/face_recog" enctype="multipart/form-data" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+							<div class="form-group">
+								<label for="input-file">Image</label>
+								<input class="form-control" type="file" name="image" accept="image/*">
+							</div>
+							<div class="form-group text-center">
+								<button class="btn btnD4" type="submit" onclick="recog()">Recognize Students</button>
+							</div>
+						</form>
+					</div>
+				</div>
+				<div class="row clearfix">
+					<div class="offset-sm-2 col-sm-8">
+						<form method="POST" action="/mark" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+				 			<div class="form-group">
+				 				<label>ClassName</label>
+				            	<input class="form-control" type="text" name="classid">
+				 			</div>
+				 			<div class="form-group text-center">
+								<button class="btn btnD4" id="mark" type="submit">Mark Attendance</button>
+							</div>
+				 		</form>
+					</div>
+				</div>
+			</div>	
+		</div>
+		<footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12">
+					<ul class="sci">
+						<li>
+							<a href="#">
+								<i class="fa fa-facebook"></i><!--use fontawesome icon -->
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="fa fa-twitter"></i><!--use fontawesome icon -->
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="fa fa-google-plus"></i><!--use fontawesome icon -->
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="fa fa-linkedin"></i><!--use fontawesome icon -->
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<i class="fa fa-instagram"></i><!--use fontawesome icon -->
+							</a>
+						</li>
+					</ul>
+					<p class="cpryt">© Copyright 2020 AMFR | Template by <a href="#">sairaj_priyatam</a></p>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+	<script>
+		AOS.init();
+	</script>
+	<script type='text/javascript' src='http://code.jquery.com/jquery-1.11.0.min.js'>
+		function recog()
+		{
+			alert("Recognizing Students!!!")
+		}
+	</script>
+	<script type="text/javascript">
+		$(document).scroll(function(){
+			$('.navbar').toggleClass('scrolled', $(this).scrollTop() > $('.navbar').height());
+		});
+	</script>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+	<script src="http://ajax.aspnetcdn.com/ajax/jquery/jquery-1.9.0.js"></script>
+	<script src="http://ajax.aspnetcdn.com/ajax/knockout/knockout-2.2.1.js"></script>	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	</body>
+</html>
