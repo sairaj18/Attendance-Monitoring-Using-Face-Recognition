@@ -3,4 +3,33 @@ Authentication is a significant issue in system control in computer-based commun
 
 # Web Page 
 
+### Home Page
+
 <img src="images/Screenshot from 2021-01-25 08-39-21.png">
+
+<img src="images/Screenshot from 2021-01-25 08-39-53.png">
+
+<img src="images/Screenshot from 2021-01-25 08-40-31.png">
+
+<img src="images/Screenshot from 2021-01-25 08-41-06.png">
+
+<img src="images/Screenshot from 2021-01-25 08-41-30.png">
+
+### Registration Page
+
+<img src="images/Screenshot from 2021-01-25 08-42-17.png">
+
+### Login Page
+
+<img src="images/Screenshot from 2021-01-25 08-41-53.png">
+
+<img src="images/Screenshot from 2021-01-25 08-42-56.png">
+
+
+### Create Class Room 
+
+<img src="images/Screenshot from 2021-01-25 08-43-20.png">
+
+### Take Attendance Page
+
+<img src="images/Screenshot from 2021-01-25 08-43-38.png">
